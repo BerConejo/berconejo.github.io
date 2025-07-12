@@ -1,0 +1,73 @@
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F0F4F8;
+}
+
+/* Estilo para el contenido a la derecha del sidebar */
+.content-area {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+/* Card principal donde se muestran las páginas */
+.card-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  background-color: #F0F4F8;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-layout {
+  background-color: #1B2631;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  gap: 1.5rem;
+}
+
+.tab-item {
+  background: transparent;
+  border: none;
+  color: #1B2631;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 10px 10px 0 0;
+  transition: color 0.3s ease;
+}
+
+.tab-item.active {
+  color: white;
+  background-color: #1B2631;
+  box-shadow: inset 0 -3px 0 rgba(165, 200, 214, 0.8);
+}
+
+
+/* Responsive padding */
+@media (max-width: 768px) {
+  .content-area {
+    padding: 1rem;
+  }
+
+  .card-container {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+}
+

@@ -1,0 +1,232 @@
+.resume {
+  padding: 0rem 0;
+  background: #F0F4F8;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume_container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.resume_header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.resume_title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1B2631;
+  margin-bottom: 1.5rem;
+}
+
+.resume_description {
+  font-size: 1.25rem;
+  color: #3F4E4F;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.resume_content {
+  display: grid;
+  gap: 4rem;
+}
+
+.resume_section {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(27, 38, 49, 0.1);
+  border: 1px solid rgba(165, 200, 214, 0.2);
+  transition: all 0.3s ease;
+}
+
+.resume_section:hover {
+  box-shadow: 0 8px 12px rgba(27, 38, 49, 0.15);
+  transform: translateY(-2px);
+}
+
+.resume_section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume_section-icon-container {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #1B2631 0%, #3F4E4F 100%);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(27, 38, 49, 0.2);
+}
+
+.resume_section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #F0F4F8;
+}
+
+.resume_section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B2631;
+  margin: 0;
+}
+
+.resume_section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, #A5C8D6 0%, #D9E4E0 100%);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.resume_timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.resume_timeline::before {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #A5C8D6 0%, #D9E4E0 50%, #A5C8D6 100%);
+}
+
+.resume_timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.resume_timeline-marker {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border: 3px solid #A5C8D6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(27, 38, 49, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resume_timeline-item:hover .resume_timeline-marker {
+  background: linear-gradient(135deg, #A5C8D6 0%, #D9E4E0 100%);
+  border-color: #3F4E4F;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(27, 38, 49, 0.2);
+}
+
+.resume_timeline-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #3F4E4F;
+  transition: color 0.3s ease;
+}
+
+.resume_timeline-item:hover .resume_timeline-icon {
+  color: #1B2631;
+}
+
+.resume_timeline-content {
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
+.resume_timeline-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.resume_timeline-year,
+.resume_timeline-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #F0F4F8;
+  border-radius: 9999px;
+  border: 1px solid #D9E4E0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3F4E4F;
+  transition: all 0.3s ease;
+}
+
+.resume_timeline-year:hover,
+.resume_timeline-location:hover {
+  background: #A5C8D6;
+  color: #1B2631;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(27, 38, 49, 0.1);
+}
+
+.resume_year-icon,
+.resume_location-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.resume_timeline-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1B2631;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.resume_timeline-description {
+  color: #3F4E4F;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .resume_title {
+    font-size: 3rem;
+  }
+
+  .resume_content {
+    grid-template-columns: 1fr;
+  }
+
+  .resume_timeline-header {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .resume_title {
+    font-size: 3.75rem;
+  }
+
+  .resume_content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
