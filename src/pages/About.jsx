@@ -149,10 +149,10 @@ export default function About() {
         <div className="service-card">
           <FaGamepad className="service-icon" />
           <div>
-            <h4>Gamming Aficionado</h4>
+            <h4>Passionate Gamer</h4>
             <p>
-              Passionate gamer who spends most of their playtime on the PS5,
-              always chasing the next great adventure.
+              Gamer who spends most of their playtime on the PS5, always chasing
+              the next great adventure.
             </p>
           </div>
         </div>
